@@ -345,7 +345,7 @@ class ApiBdtBuilder:
     def historico_contaminacao(self):
 
         resp = self.api.consult_processo_contaminacao(self.setor, self.quadra, self.lote)
-
+        print('Debug', resp)
         #a webservice nao diferencia SQL invalido de SQL que nao possui processos!
         try:
             if resp['Processos'] is None:

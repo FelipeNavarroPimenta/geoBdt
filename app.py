@@ -275,7 +275,6 @@ class tombamentos(Resource):
 
     @envelope
     def get(self, sql):
-        print(request.args.get('sql'))
         if request.args.get('sql'):
             sql_list = request.args.get('sql').split(',')
             response = []
