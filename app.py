@@ -421,7 +421,7 @@ class bdt(Resource):
     def get(self, sql):
         sql, digito = tuple(sql.split('-'))
         setor, quadra, lote = tuple(sql.split('.'))
-        bdt = gerar_bdt(setor, quadra, lote)
+        bdt = gerar_bdt(setor, quadra, lote, digito)
         data = {
             'bdt': [
                 build_response('Área de manancial',
