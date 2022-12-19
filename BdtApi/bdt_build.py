@@ -382,9 +382,11 @@ class ApiBdtBuilder:
     @property
     def tombamentos(self):
 
+        print('Debug consult tombamentos')
+        print(f'setor:{self.setor}, quadra:{self.quadra}, lote:{self.lote}, digito:{self.digito}')
         resp = self.api.consult_tombamentos(self.setor, self.quadra, self.lote, self.digito)
-        print('Debug')
         print(resp)
+
         #a webservice nao diferencia SQL invalido de SQL que nao possui processos!
 
         if resp is None:
